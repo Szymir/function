@@ -1,14 +1,6 @@
-function drawTree(x) {
-	for ( i = 0; i <= x; i += 2 ) {
-		var star = '';
-		for ( k = x; k >= i; k -= 2 ) {
-			star += ' ';
-		}
-		for ( j = 0; j <= i; j++ ) {
-			star += '*';
-		}
-		console.log(star);
-	}
-}
+var someButtons = document.getElementsByClassName('button');
+var number = someButtons.length;
 
-drawTree(5);
+for ( i=0; i < number ; i++) {
+	alert(someButtons[i].innerHTML);
+}
