@@ -1,6 +1,12 @@
-var someButtons = document.getElementsByClassName('button');
-var number = someButtons.length;
+var button = document.getElementById('addElem');
+var	list = document.getElementById('list');
 
-for ( i=0; i < number ; i++) {
-	alert(someButtons[i].innerHTML);
-}
+
+
+button.addEventListener('click', function() {
+	var newElem = document.createElement('li');
+	var itemNumber = document.getElementsByTagName('li');
+	var number = itemNumber.length;
+	newElem.innerHTML = 'item ' + number;
+	list.appendChild(newElem);
+});
